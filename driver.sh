@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MODULESHOME=/opt/cray/pe/modules/3.2.11.2
+MODULESHOME=/usr/share/Modules/3.2.10
 source ${MODULESHOME}/init/bash
-module load  cray-R/3.4.2
+module load lang/r/3.6.0-gcc
 R --vanilla --quiet --file=$1
 
