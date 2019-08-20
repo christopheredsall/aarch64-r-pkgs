@@ -1,2 +1,5 @@
-all:
-	echo "Hello World"
+all: testthat
+
+
+testthat:
+	R --vanilla --quiet --file=testthat.r
