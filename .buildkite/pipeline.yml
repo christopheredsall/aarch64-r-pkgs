@@ -1,11 +1,11 @@
 steps:
-    - label: testthat
-      command: ./driver.sh testthat.r
+    - label: "testthat"
+      command: "./driver.sh testthat.r"
 
-    - label: foo
-      command: ./driver.sh foo.r
-      soft-fail:
+    - label: "foo"
+      command: "./driver.sh foo.r"
+      soft_fail:
           - exit_status: 1
 
-    - label: shiny
-      command: ./driver.sh shiny.r
+    - label: "shiny"
+      command: "./driver.sh shiny.r"
