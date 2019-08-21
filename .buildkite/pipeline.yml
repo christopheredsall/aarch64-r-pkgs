@@ -1,0 +1,8 @@
+steps:
+    - label: Hello world
+      command: echo "Hello, World!"
+
+    - wait
+
+    - label: Make
+      command: make
