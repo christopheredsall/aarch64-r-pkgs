@@ -21,5 +21,5 @@ echo "steps:"
 #     echo "      - exit_status: 1"
 # done
 
-echo "  - label: \"test\""
-echo "    command: echo \"TEST\""
+echo "  - label: test"
+echo "    command: echo TEST"
