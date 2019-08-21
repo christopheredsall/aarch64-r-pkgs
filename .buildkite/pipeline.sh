@@ -3,8 +3,8 @@
 # exit immediately on failure, or if an undefined variable is used
 # set -eu
 
-file     = "packages.txt"
-packages = `cat $file`
+# file     = "packages.txt"
+# packages = `cat $file`
 
 # begin the pipeline.yml file
 echo "steps:"
