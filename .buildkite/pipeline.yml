@@ -4,3 +4,8 @@ steps:
 
     - label: foo
       command: ./driver.sh foo.r
+      soft-fail:
+          - exit_status: 1
+
+    - label: shiny
+      command: ./driver.sh shiny.r
