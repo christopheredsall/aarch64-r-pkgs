@@ -15,7 +15,7 @@ echo "    commands:"
 echo "        - MODULESHOME=/usr/share/Modules/3.2.10"
 echo "        - source ${MODULESHOME}/init/bash"
 echo "        - module load lang/r/3.6.0-gcc"
-echo "        - echo \"install.packages('${pkg}', repos='https://www.stats.bris.ac.uk/R/'); library('${pkg}')\" | R --vanilla --quiet"
+echo "        - echo \"if (!require('${pkg}')) { install.packages('${pkg}', repos='https://www.stats.bris.ac.uk/R/') } else { library('${pkg}') }\" | R --vanilla --quiet"
 echo "    soft_fail:"
 echo "        - exit_status: 1"
 done
