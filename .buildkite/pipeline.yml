@@ -1,7 +1,7 @@
 steps:
-    - command: ./add_pkgs.sh
+    - command: "./add_pkgs.sh"
       label: "Parse packages"
 
-    - command: .buildkite/pipeline.sh | buildkite-agent pipeline upload
-      label: :pipeline: Upload
+    - command: ".buildkite/pipeline.sh | buildkite-agent pipeline upload"
+      label: ":pipeline: Upload"
 
