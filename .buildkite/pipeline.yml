@@ -1,8 +1,6 @@
 steps:
-    - label: Hello world
-      command: echo "Hello, World!"
+    - label: testthat
+      command: ./driver.sh testthat.r
 
-    - wait
-
-    - label: Make
-      command: make
+    - label: foo
+      command: ./driver.sh foo.r
