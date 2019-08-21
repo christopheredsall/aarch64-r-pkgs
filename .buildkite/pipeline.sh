@@ -14,4 +14,7 @@ echo "steps:"
 
 echo "  - label: dplyr"
 echo "    commands:"
-echo "        - \"echo 'library(dplyr)' | R --vanilla --quiet\""
+echo "        - MODULESHOME=/usr/share/Modules/3.2.10"
+echo "        - source ${MODULESHOME}/init/bash"
+echo "        - module load lang/r/3.6.0-gcc"
+echo "        - echo 'library(dplyr)' | R --vanilla --quiet"
