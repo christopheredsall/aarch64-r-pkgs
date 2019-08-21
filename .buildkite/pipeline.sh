@@ -13,4 +13,5 @@ echo "steps:"
 #     echo "      - exit_status: 1"
 
 echo "  - label: dplyr"
-echo "    command: ./driver.sh dplyr.r"
+echo "    commands:"
+echo "        - \"echo 'library(dplyr)' | R --vanilla --quiet\""
