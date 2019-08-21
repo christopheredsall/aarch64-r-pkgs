@@ -2,4 +2,3 @@ steps:
     - command: .buildkite/pipeline.sh | buildkite-agent pipeline upload
       label: :pipeline: Upload
 
-    - wait
