@@ -8,7 +8,7 @@ mapfile -t packages < packages.txt
 # begin the pipeline.yml file
 echo "steps:"
 
-for pkg in $packages
+for pkg in ${packages[@]}
 do
 echo "  - label: ${pkg}"
 echo "    commands:"

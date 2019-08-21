@@ -1,9 +1,0 @@
-steps:
-    - command: "./add_pkgs.sh"
-      label: "Parse packages"
-      artifact_paths:
-          - "*.r"
-
-    - command: ".buildkite/pipeline.sh | buildkite-agent pipeline upload"
-      label: ":pipeline: Upload"
-
