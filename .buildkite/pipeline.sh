@@ -10,12 +10,11 @@ echo "steps:"
 
 # Isambard
 #MODULESHOME=/usr/share/Modules/3.2.10
-#RMODULE=cray-R/3.4.2
+#RMODULE=lang/r/3.6.0-gcc
 
 # Catalyst
 export MODULESHOME=/opt/cray/pe/modules/3.2.11.2
-export RMODULE=lang/r/3.6.0-gcc
-
+export RMODULE=cray-R/3.4.2
 
 for pkg in ${packages[@]}
 do
