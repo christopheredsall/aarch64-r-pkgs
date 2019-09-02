@@ -38,13 +38,25 @@ do
     esac
     for pkg in "${packages[@]}"
     do
-        # for the meantime only do CRAN
-        if [ "${repositories[${pkg}]}" == "CRAN" ]; then
+        # for the meantime only do CRAN and GitHub
+        RSCRIPT=""
+        case "${repositories[${pkg}]}" in
+        CRAN)
+            RSCRIPT="if ("'!'"require('${pkg}')) { install.packages('${pkg}', repos='https://www.stats.bris.ac.uk/R/') }; library('${pkg}')"
+            ;;
+        github)
+            RSCRIPT="if ("'!'"require('${pkg}')) { devtools::install_github('${organisations[${pkg}]}/${pkg}')  }; library('${pkg}')"
+            ;;
+        *)
+            # unsupported, skip
+            ;;
+        esac
+        if [ -n "${RSCRIPT}" ] ; then
             echo "  - label: ${pkg}"
             echo "    commands:"
             echo "        - source ${MODULESHOME}/init/bash"
             echo "        - module load ${RMODULE}"
-            echo "        - echo \"if (!require('${pkg}')) { install.packages('${pkg}', repos='https://www.stats.bris.ac.uk/R/') }; library('${pkg}')\" | nice R --vanilla --quiet"
+            echo "        - echo \" $RSCRIPT \" | nice R --vanilla --quiet"
             echo "    agents:"
             echo "      queue: ${queue}"
             echo "    soft_fail:"
