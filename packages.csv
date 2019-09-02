@@ -1,9 +1,9 @@
 dplyr,CRAN,
 TwoSampleMR,github,MRCIEU
-data.table,CRAN
-ggplot2,CRAN
-tidyverse,CRAN
-devtools,CRAN
+data.table,CRAN,
+ggplot2,CRAN,
+tidyverse,CRAN,
+devtools,CRAN,
 meffil,github,perishky
 biomaRt,bioconductor,
 argparse,CRAN,
