@@ -39,6 +39,7 @@ do
     for pkg in "${packages[@]}"
     do
         # for the meantime only do CRAN and GitHub
+        # TODO refactor with remotes - https://github.com/r-lib/remotes
         RSCRIPT=""
         case "${repositories[${pkg}]}" in
         CRAN)
