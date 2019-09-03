@@ -48,6 +48,9 @@ do
         github)
             RSCRIPT="if ("'!'"require('${pkg}')) { devtools::install_github('${organisations[${pkg}]}/${pkg}')  }; library('${pkg}')"
             ;;
+        bioconductor)
+            RSCRIPT="if ("'!'"require('${pkg}')) { BiocManager::install('${pkg}')  }; library('${pkg}')"
+            ;;
         *)
             # unsupported, skip
             ;;
