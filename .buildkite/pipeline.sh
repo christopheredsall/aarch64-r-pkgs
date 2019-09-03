@@ -51,6 +51,9 @@ do
         bioconductor)
             RSCRIPT="if ("'!'"require('${pkg}')) { BiocManager::install('${pkg}')  }; library('${pkg}')"
             ;;
+        rforge)
+            RSCRIPT="if ("'!'"require('${pkg}')) { install.packages('${pkg}', repos='http://rforge.net/') }; library('${pkg}')"
+            ;;
         *)
             # unsupported, skip
             ;;
